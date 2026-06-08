@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FilmTrack - Votre Filmothèque</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1> FILMTRACK</h1>
+            <button id="settingsBtn" class="settings-btn">⚙️ clé API</button>
+        </div>
+    </header>
+
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Clé API</h2>
+            <div class="settings-form">
+                <label for="apiKey">Clé API OMDb:</label>
+                <input type="text" id="apiKey" placeholder="Entrez votre clé API OMDb">
+                <small>Obtenez une clé gratuitement sur <a href="https://www.omdbapi.com/apikey.aspx" target="_blank">omdbapi.com</a></small>
+                <button id="saveApiKey" class="btn-primary">Enregistrer</button>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section class="search-section">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Rechercher un film..." class="search-input">
+                <button id="searchBtn" class="btn-primary">Rechercher</button>
+            </div>
+            <div id="searchResults" class="search-results"></div>
+        </section>
+
+        <div class="main-container">
+            <section class="films-section">
+                <div class="section-header">
+                    <h2>📽️ Mes Films</h2>
+                    <span id="filmCount" class="count">0</span>
+                </div>
+                <div id="filmsList" class="films-grid"></div>
+            </section>
+
+            <section class="watchlist-section">
+               
+                <div class="section-header">
+                    <h2>📋 Ma Watchlist</h2>
+                    <span id="watchlistCount" class="count">0</span>
+                </div>
+                <div id="watchlist" class="watchlist-container"></div>
+            </section>
+        </div>
+
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <h3>Films vus</h3>
+                    <p id="statsFilms" class="stat-number">0</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Note moyenne</h3>
+                    <p id="statsAverage" class="stat-number">-</p>
+                </div>
+                <div class="stat-box">
+                    <h3>À regarder</h3>
+                    <p id="statsWatchlist" class="stat-number">0</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; ESTEBAN MINHAVA</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
